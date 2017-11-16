@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+
+<html>
+<body>
+
+
+<canvas id="tuval" width="640" height="480"  style="border:1px solid;"></canvas>
+
+<script>
+
+	function tiklama(e){
+	cizim.beginPath();
+	cizim.arc(e.x,e.y,50,0,2*Math.PI);
+	cizim.stroke();
+	}
+
+
+	var tuval=document.getElementById("tuval");
+	var cizim=tuval.getContext("2d");
+	tuval.addEventListener("click",tiklama	);
+	
+	cizim.beginPath();
+	cizim.moveTo(0,0);
+	cizim.lineTo(300,300);
+	cizim.arc(300,300,50,0,2*Math.PI);
+	cizim.font="30px Arial";
+	cizim.fillText("I am writing this line here at my own will",280,320);
+	cizim.stroke();
+	
+</script>
+
+
+</body>
+</html>
